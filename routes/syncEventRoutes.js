@@ -1,5 +1,3 @@
-console.log(__dirname); // Logs the current directory
-
 const express = require('express');
 const { createSyncEvent, getSyncHistory, getDevicesWithRepeatedFailures } = require('../controllers/syncEventController');
 
