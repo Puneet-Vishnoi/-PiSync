@@ -1,0 +1,55 @@
+{
+  "info": {
+    "_postman_id": "pysync-api-collection",
+    "name": "PiSync API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Sync Event",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"device_id\": \"abc123\",\n  \"timestamp\": \"2024-05-08T12:00:00Z\",\n  \"total_files_synced\": 20,\n  \"total_errors\": 1,\n  \"internet_speed\": 3.2\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/sync-event",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "sync-event"]
+        }
+      }
+    },
+    {
+      "name": "Get Device Sync History",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/device/abc123/sync-history",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "device", "abc123", "sync-history"]
+        }
+      }
+    },
+    {
+      "name": "Get Devices with Repeated Failures",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/devices/repeated-failures",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "devices", "repeated-failures"]
+        }
+      }
+    }
+  ]
+}
