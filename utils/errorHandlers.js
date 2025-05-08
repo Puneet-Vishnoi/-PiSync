@@ -20,7 +20,7 @@ function handleError(err, req, res, next) {
   return res.status(500).json({ error: 'Something went wrong. Please try again later.' });
 }
 
-// Middleware for catching 404 errors (Page Not Found)
+// Middleware for catching 404 errors
 function notFoundHandler(req, res) {
   res.status(404).json({ error: 'Not Found' });
 }

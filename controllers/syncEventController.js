@@ -35,7 +35,7 @@ const createSyncEvent = async (req, res, next) => {
 
     res.status(201).json({ message: 'Event stored successfully' });
   } catch (error) {
-    next(error); 
+    next(error);
   }
 };
 
