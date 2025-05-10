@@ -1,0 +1,27 @@
+services:
+  app:
+    build: .
+    container_name: pysinc_app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+    networks:
+      - pysinc-network
+    env_file:
+      - .env
+  
+  mongodb:
+    image: mongo:8
+    container_name: pisync-mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: pisync
+    networks:
+      - pysinc-network
+      
+networks:
+  pysinc-network:
+    driver: bridge

@@ -1,7 +1,7 @@
 // server.js
 const connectDB = require('./config/db');
 const app = require('./app');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 if (process.env.NODE_ENV !== 'test') {
   connectDB().then(() => {
