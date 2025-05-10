@@ -128,9 +128,6 @@ docker exec -it pisync-app sh
 
 # Access MongoDB
 docker exec -it pisync-mongodb mongo
-
-# Access Redis
-docker exec -it pisync-redis redis-cli
 ```
 
 ## 📊 Volume Information
